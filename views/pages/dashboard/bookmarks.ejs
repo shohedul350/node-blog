@@ -1,0 +1,51 @@
+<%- include('../../partials/head.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <%- include('../../partials/sidebar.ejs') %>
+        </div>
+        <div class="col-md-10 ">
+            <div class="card card-body">
+              <h5 class="my-3">List Of My Bookmarks</h5>
+               <div class="row">
+                    <% if (posts.length == 0){ %>
+                        <div class="text-center text-muted">
+                          <p>There is no posts available right now</p>
+                          <a href="/posts/create" class="btn btn-primary btn-sm">Create Post now</a>
+                        </div>
+                  <% } else{ %>
+                    <% for (let post of posts) { %>
+                      <div class="col-md-12">
+                      <div class="blog-entry ftco-animate d-md-flex">
+                        <% if (post.thumbnail){ %>
+                          <img src="<%= post.thumbnail %>" alt="<%= post.tittle %>" class="img-fluid"
+                          style="width: 50px;height:50px">
+                        <% } %>  
+                        <div class="text text-2 pl-md-4">
+                             <h4><a href="/explorer/<%= post._id %>" style="color: black;">
+                            <%= post.tittle %>
+                           </a></h4> 
+                          <p><a href="/explorer/<%= post._id %>" class="btn-custom">View Post </a>
+                        </p>
+                         
+                        </div>
+                        
+                      </div>
+                     
+                      </div>
+                       <% }%>  
+                    <% }%>
+
+               </div>
+            </div>
+        </div>
+       
+
+</div>
+
+</div>
+<%- include('../../partials/footer.ejs') %>
+
+</body>
+</html>
+

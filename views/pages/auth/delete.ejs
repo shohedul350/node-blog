@@ -1,0 +1,58 @@
+<%- include('../../partials/head.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <%- include('../../partials/sidebar.ejs') %>
+        </div>
+        <div class="col-md-10 ">
+            <div class="card card-body text-center">
+              <h5 class="my-3">Delete Account</h5>
+               <div class="row " style="margin: auto;">
+                <form action="/auth/delete" method="POST"> 
+                
+
+                    <div class="form-group">
+                        <label htmlFor="password"> Password: </label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Enter Your Password"
+                          name="password"
+                          id="password"
+          
+                        />
+                        
+                      </div>
+
+                      <div class="form-group">
+                        <label htmlFor="newpassword">Confirm Password: </label>
+                        <input
+                          type="password"
+                          class="form-control "
+                          placeholder="Enter Your Confirm Password"
+                          name="conpassword"
+                          id="conpassword"
+          
+                        />
+                        
+                      </div>
+
+            
+        
+                  
+                    <button class="btn btn-danger my-3 d-block form-control" type="submit">Delete Accountd</button>
+                  </form>
+
+               </div>
+            </div>
+        </div>
+       
+
+</div>
+
+</div>
+<%- include('../../partials/footer.ejs') %>
+
+</body>
+</html>
+
