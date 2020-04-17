@@ -12,7 +12,8 @@
                              
                                <div class="d-flex">
                           <small>
-                            <%= moment(post.createAt) %>,
+                            
+                            <%= moment(post.createdAt) %>,
                             posted By  <a href="/author/<%=post.author._id %>"><%= post.author.username %></a>
                             <%= post.readTime %>
                           </small>
@@ -73,7 +74,7 @@
                                        <div class="media-body my-3">
                                         <p class="text-muted">
                                         Comment By <a href="/author/<%=comment.user._id %>"><%= comment.user.username %></a>
-                                          <%=  moment(comment.createAt) %>
+                                          <%=  moment(comment.createdAt) %>
 
                                         </p> 
                                         <p> <%= comment.body %></p>
@@ -88,7 +89,7 @@
                                                    <div class="media-body ">
                                                     <p class="text-muted">
                                                        Reply By <a href="/author/<%=reply.user._id %>"><%= reply.user.username %></a>,
-                                                      <%=  moment(reply.createAt) %>
+                                                      <%=  moment(reply.createdAt) %>
             
                                                     </p> 
                                                           <p><%= reply.body %></p>

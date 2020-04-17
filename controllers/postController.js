@@ -67,7 +67,7 @@ exports.createPostPostController = async(req, res, next) =>{
          )
          req.flash('success','Post Create uccessfull')
         //  return res.redirect(`/posts/edit/${createdPost._id}`)
-        return   res.redirect('/dashboard')
+        return res.redirect('/dashboard')
          
      } catch (error) {
          console.log(error)
